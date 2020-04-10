@@ -17,7 +17,7 @@ struct process {
 bool compareArrival(process p1, process p2) 
 { 
     if(p1.arrival_time == p2.arrival_time) {
-        return false;
+        return true;
     } 
     return p1.arrival_time < p2.arrival_time;
 }
@@ -92,3 +92,21 @@ int main() {
 
 
 }
+
+/*
+
+AT - Arrival Time of the process
+BT - Burst time of the process
+ST - Start time of the process
+CT - Completion time of the process
+TAT - Turnaround time of the process
+WT - Waiting time of the process
+RT - Response time of the process
+
+Formulas used:
+
+TAT = CT - AT
+WT = TAT - BT
+RT = ST - AT
+
+*/
