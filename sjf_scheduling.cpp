@@ -103,7 +103,7 @@ int main() {
         total_turnaround_time += p[idx].turnaround_time;
         total_waiting_time += p[idx].waiting_time;
         total_response_time += p[idx].response_time;
-        total_idle_time += current_time-p[idx].start_time;
+        total_idle_time += p[idx].start_time - current_time;
 
         is_completed[idx] = 1;
         completed++;

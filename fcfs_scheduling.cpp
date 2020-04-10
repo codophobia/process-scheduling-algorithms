@@ -64,7 +64,7 @@ int main() {
         total_turnaround_time += p[i].turnaround_time;
         total_waiting_time += p[i].waiting_time;
         total_response_time += p[i].response_time;
-        total_idle_time += (i == 0)?(p[i].arrival_time):(p[i-1].completion_time-p[i].start_time);
+        total_idle_time += (i == 0)?(p[i].arrival_time):(p[i].start_time - p[i-1].completion_time);
     }
 
     avg_turnaround_time = (float) total_turnaround_time / n;
