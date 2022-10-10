@@ -56,7 +56,7 @@ int main() {
 
     while(completed != n) {
         int idx = -1;
-        int mx = -1;
+        int mx = p[0].priority;
         for(int i = 0; i < n; i++) {
             if(p[i].arrival_time <= current_time && is_completed[i] == 0) {
                 if(p[i].priority > mx) {
@@ -100,8 +100,8 @@ int main() {
         }  
     }
 
-    int min_arrival_time = 10000000;
-    int max_completion_time = -1;
+    int min_arrival_time = p[0].arrival_time;
+    int max_completion_time = p[0].completion_time;
     for(int i = 0; i < n; i++) {
         min_arrival_time = min(min_arrival_time,p[i].arrival_time);
         max_completion_time = max(max_completion_time,p[i].completion_time);
