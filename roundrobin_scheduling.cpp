@@ -2,6 +2,7 @@
 #include <algorithm> 
 #include <iomanip>
 #include <queue> 
+#include <string.h>
 using namespace std;
 
 struct process {
